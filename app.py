@@ -121,8 +121,8 @@ except TypeError:
         css=navbar_css,
     )
 
-col3, col4, col5= st.columns([2,1,2])
-with col4:
+col4, col5, col6= st.columns([2,1,2])
+with col5:
     st.image("./assets/logo.png", width=300)
     
 st.title("PET-Saúde")
@@ -180,8 +180,20 @@ st.divider()
 
 st.write(f"Página atual: {page}")
 
-col1, col2 = st.columns(2)
-with col1:
-    st.image("./assets/logounb.jpg", width=80)
+st.markdown("""
+<hr style="margin-top: 50px;">
+
+<div style="
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    padding: 10px;
+">
+    © 2026 PET-Saúde UNB • Todos os direitos reservados
+</div>
+""", unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns([3.1,1,3])
 with col2:
-    st.image("./assets/logo.png", width=80)
+    st.image("./assets/logounb.png", width=60)
+    
